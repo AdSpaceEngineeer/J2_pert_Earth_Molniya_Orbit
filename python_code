@@ -235,7 +235,7 @@ orbit_elements_pert_arr = np.array(orbit_elements_pert)
 
 #Variations in Semimajor Axis
 fig2,ax = plt.subplots(figsize = (10,4))
-ax.plot(t, orbit_elements_pert_arr[:,0]-26600, 'black')
+ax.plot(t/3600, orbit_elements_pert_arr[:,0]-26600, 'black')
 ax.set_xlabel('time/hours')
 ax.set_ylabel('delta a/km')
 ax.set_title('Plot of Semimajor Axis Variation of J2 Perturbed Orbit')
@@ -243,7 +243,7 @@ plt.show()
 
 #Variations in eccentricity
 fig3,ax = plt.subplots(figsize = (10,4))
-ax.plot(t, orbit_elements_pert_arr[:,1]-0.74, 'green')
+ax.plot(t/3600, orbit_elements_pert_arr[:,1]-0.74, 'green')
 ax.set_xlabel('time/hours')
 ax.set_ylabel('delta e')
 ax.set_title('Plot of Eccentricity Variations of J2 Perturbed Orbit')
@@ -251,7 +251,7 @@ plt.show()
 
 #Variations in Inclination
 fig4,ax = plt.subplots(figsize = (10,4))
-ax.plot(t, (orbit_elements_pert_arr[:,2] - 1.10654)*180/math.pi, 'blue')
+ax.plot(t/3600, (orbit_elements_pert_arr[:,2] - 1.10654)*180/math.pi, 'blue')
 ax.set_xlabel('time/hours')
 ax.set_ylabel('delta i/deg')
 ax.set_title('Plot of Inclination Variations of J2 Perturbed Orbit')
@@ -259,7 +259,7 @@ plt.show()
 
 #Variations in RAAN
 fig5,ax = plt.subplots(figsize = (10,4))
-ax.plot(t, (orbit_elements_pert_arr[:,3] - math.pi*45/180)*180/math.pi, 'orange')
+ax.plot(t/3600, (orbit_elements_pert_arr[:,3] - math.pi*45/180)*180/math.pi, 'orange')
 ax.set_xlabel('time/hours')
 ax.set_ylabel('delta Om/deg')
 ax.set_title('Plot of Right Ascension Variations of J2 Perturbed Orbit')
@@ -267,7 +267,7 @@ plt.show()
 
 #Variations in AOP
 fig6,ax = plt.subplots(figsize = (10,4))
-ax.plot(t, (orbit_elements_pert_arr[:,4] - math.pi*5/180)*180/math.pi, 'purple')
+ax.plot(t/3600, (orbit_elements_pert_arr[:,4] - math.pi*5/180)*180/math.pi, 'purple')
 ax.set_xlabel('time/hours')
 ax.set_ylabel('delta w/deg')
 ax.set_title('Plot of Periapse Argument Variations of J2 Perturbed Orbit')
